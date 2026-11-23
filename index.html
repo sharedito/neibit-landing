@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neibit — Compra y vende cerca de ti</title>
+  <meta name="description" content="Neibit es un marketplace local para comprar y vender productos y servicios en tu zona. Resumen del producto, la arquitectura y el estado del proyecto.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/palette.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        Neibit
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#producto">Producto</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a class="nav-optional" href="#tecnologia">Tecnología</a>
+        <a class="nav-optional" href="#capturas">Capturas</a>
+        <a class="btn btn-primary btn-sm" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow eyebrow-light">Resumen del producto · Microsoft for Startups</p>
+        <h1>Compra y vende <span class="accent">cerca de ti</span></h1>
+        <p class="lead">
+          Neibit es un marketplace hiperlocal: publicas un anuncio en minutos y las personas de tu
+          zona lo encuentran por categoría, precio, condición y distancia. La misma cuenta funciona
+          en la web y en la app móvil.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-secondary" href="#producto">Conocer el producto</a>
+          <a class="btn btn-ghost" href="#capturas">Ver capturas</a>
+        </div>
+        <ul class="pill-row">
+          <li class="pill">Web</li>
+          <li class="pill">Android</li>
+          <li class="pill">iOS</li>
+          <li class="pill">Español · Inglés · Francés</li>
+        </ul>
+        <p class="hero-note">
+          Esta página reúne, para la revisión del programa, qué es Neibit, a quién sirve, cómo está
+          construido y en qué estado se encuentra.
+        </p>
+      </div>
+    </section>
+
+    <section class="facts" aria-label="Datos del producto">
+      <div class="container">
+        <dl class="facts-grid">
+          <div class="fact">
+            <dt>Plataformas</dt>
+            <dd>Web, Android e iOS</dd>
+          </div>
+          <div class="fact">
+            <dt>Idiomas</dt>
+            <dd>ES · EN · FR</dd>
+          </div>
+          <div class="fact">
+            <dt>Servicios</dt>
+            <dd>4 microservicios .NET 8</dd>
+          </div>
+          <div class="fact">
+            <dt>Infraestructura</dt>
+            <dd>Kubernetes + Helm</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="producto">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Qué es Neibit</p>
+          <h2>Un clasificado local, no un catálogo global</h2>
+          <p>
+            Neibit conecta a quien quiere vender algo con quien lo busca a pocos kilómetros. El
+            producto cubre el ciclo completo: crear una cuenta, publicar con fotos, encontrar por
+            cercanía y gestionar los anuncios desde cualquier dispositivo.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Hiperlocal por diseño</h3>
+            <p>
+              La búsqueda parte de tu ubicación: geolocalización del dispositivo, buscador de
+              ciudades y un radio ajustable en kilómetros. Los resultados son de tu zona.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Publicar es simple</h3>
+            <p>
+              Fotos, título, descripción, categoría, precio y condición. Crear, editar y eliminar
+              anuncios desde la web o el móvil, con el mismo usuario.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Una cuenta, dos clientes</h3>
+            <p>
+              La web y la app móvil consumen los mismos servicios a través de una capa BFF, así que
+              las funciones y los datos son idénticos en ambos lados.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="problema">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Problema y solución</p>
+          <h2>La distancia importa más que el tamaño del catálogo</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card card-problem">
+            <span class="card-label">Problema</span>
+            <h3>Los clasificados globales no están pensados para el barrio</h3>
+            <p>
+              El comprador tiene que filtrar la zona a mano, los anuncios se pierden entre miles de
+              resultados de otras ciudades y publicar exige más pasos de los necesarios. En un
+              mercado local, lo que decide la compra es la cercanía y la confianza en la otra
+              persona, no el volumen del catálogo.
+            </p>
+          </article>
+          <article class="card card-solution">
+            <span class="card-label">Solución</span>
+            <h3>La ubicación es el punto de partida</h3>
+            <p>
+              Neibit resuelve la búsqueda por radio desde tu posición, ofrece los filtros que de
+              verdad se usan en persona (distancia, condición, fecha, precio) y reduce la
+              publicación a un formulario breve con fotos. La web y el móvil comparten servicios,
+              cuenta y datos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2>Cuatro pasos, sin registro para explorar</h2>
+          <p>
+            Cualquier persona puede buscar anuncios sin cuenta. La cuenta solo es necesaria para
+            publicar y gestionar.
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <h3>Ubica tu zona</h3>
+            <p>
+              La app detecta tu posición o buscas tu ciudad; el radio de búsqueda se ajusta en
+              kilómetros.
+            </p>
+          </li>
+          <li>
+            <h3>Encuentra lo que buscas</h3>
+            <p>
+              Búsqueda por texto con sugerencias y filtros por categoría, precio, condición, fecha
+              y distancia, con orden por más reciente o precio.
+            </p>
+          </li>
+          <li>
+            <h3>Publica tu anuncio</h3>
+            <p>
+              Fotos, categoría, título, descripción, precio y condición. El anuncio queda disponible
+              en los resultados de tu zona.
+            </p>
+          </li>
+          <li>
+            <h3>Gestiona y cierra</h3>
+            <p>
+              Edita, actualiza o elimina tus anuncios desde <em>Mis anuncios</em>. Las reseñas de
+              otros usuarios ayudan a decidir con quién tratar.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="funciones">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Funcionalidades</p>
+          <h2>Lo que ya hace el producto</h2>
+          <p>
+            El conjunto de funciones está activo en el producto actual. Neibit mantiene además un
+            catálogo de funciones adicionales detrás de banderas de configuración, para activarlas
+            sin tocar el código.
+          </p>
+        </div>
+
+        <ul class="checks">
+          <li>Registro e inicio de sesión con verificación de correo electrónico</li>
+          <li>Acceso con proveedor de identidad externo (OAuth)</li>
+          <li>Publicación de anuncios con varias imágenes</li>
+          <li>Búsqueda por texto con sugerencias y geocodificación de ciudades</li>
+          <li>Filtros por categoría, precio, condición, fecha y radio de distancia</li>
+          <li>Vista de cuadrícula o lista, con paginación</li>
+          <li>Reseñas de usuarios dentro del anuncio</li>
+          <li>Detalle del anuncio con publicaciones similares</li>
+          <li>Gestión de perfil y preferencias de la cuenta</li>
+          <li>Interfaz en español, inglés y francés</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="tecnologia">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Tecnología</p>
+          <h2>Arquitectura de microservicios, un cliente por plataforma</h2>
+          <p>
+            Un backend por dominio, gateways BFF por cliente y contenedores desplegados en
+            Kubernetes. Es la misma arquitectura que sostiene la web y la app móvil hoy.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Web · React 19</h3>
+            <p>
+              Aplicación React con TypeScript y Vite, componentes MUI sobre un tema centralizado y
+              compilada como sitio estático servido por Nginx.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Móvil · Flutter</h3>
+            <p>
+              Una sola base de código en Dart para Android e iOS, con arquitectura por features y
+              gestión de estado por BLoC.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Servicios · .NET 8</h3>
+            <p>
+              Cuatro APIs independientes: autenticación y cuentas, anuncios, búsqueda y correo
+              transaccional, con arquitectura limpia y pruebas por servicio.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Gateways BFF · YARP</h3>
+            <p>
+              Un proxy por cliente que agrega y da forma a las respuestas, aísla a los clientes de
+              los servicios internos y concentra CORS y autenticación.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Datos y mensajería</h3>
+            <p>
+              PostgreSQL por servicio, RabbitMQ con MassTransit para eventos entre dominios y MinIO
+              (compatible con S3) para las imágenes de los anuncios.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Entrega continua</h3>
+            <p>
+              Contenedores Docker, despliegue con Helm y Skaffold sobre Kubernetes, y canalizaciones
+              de CI/CD en Azure Pipelines con entornos por pull request.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="seguridad">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Seguridad y datos</p>
+          <h2>Cuentas protegidas por el servicio de identidad</h2>
+        </div>
+
+        <ul class="checks">
+          <li>Contraseñas almacenadas con hash mediante el gestor de identidad de ASP.NET</li>
+          <li>Tokens de sesión y de refresco emitidos por el servicio de autenticación, con los de refresco guardados con hash</li>
+          <li>Verificación de correo electrónico antes de operar con la cuenta</li>
+          <li>El gateway web intercambia la cookie de sesión por un token JWT de corta duración</li>
+          <li>Imágenes de anuncios en almacenamiento de objetos privado, no en el sistema de archivos del servidor</li>
+          <li>Tráfico servido por HTTPS en producción</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="capturas">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Capturas</p>
+          <h2>El producto en uso</h2>
+          <p>
+            Imágenes de la aplicación web y móvil. Reemplaza los archivos en <code>assets/</code>
+            manteniendo los nombres.
+          </p>
+        </div>
+
+        <div class="shots">
+          <figure>
+            <img src="assets/web-home.png" class="is-wide" alt="Pantalla de inicio de Neibit en la web, con buscador y anuncios cercanos" onerror="this.remove()">
+            <figcaption>Web: inicio con búsqueda por zona</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/movil-anuncios.png" alt="App móvil de Neibit mostrando una lista de anuncios cercanos" onerror="this.remove()">
+            <figcaption>Móvil: anuncios cercanos</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/movil-publicar.png" alt="Formulario de publicación de un anuncio en la app móvil de Neibit" onerror="this.remove()">
+            <figcaption>Móvil: publicar un anuncio</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Contacto</p>
+          <h2>Hablemos</h2>
+          <p>Respondemos cualquier pregunta adicional de la revisión por correo electrónico.</p>
+        </div>
+
+        <!-- TODO: verifica razón social, correo y país antes de publicar la página. -->
+        <dl class="contact">
+          <div>
+            <dt>Empresa</dt>
+            <dd>Neibit Inc.</dd>
+          </div>
+          <div>
+            <dt>Producto</dt>
+            <dd>Neibit — marketplace local</dd>
+          </div>
+          <div>
+            <dt>Correo</dt>
+            <dd><a href="mailto:contacto@neibit.app">contacto@neibit.app</a></dd>
+          </div>
+          <div>
+            <dt>Repositorio</dt>
+            <dd><a href="https://github.com/sharedito/neibit-landing">github.com/sharedito/neibit-landing</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">N</span>
+            Neibit
+          </a>
+          <p>
+            Marketplace local para comprar y vender productos y servicios cerca de casa.
+          </p>
+        </div>
+        <div>
+          <h3>Producto</h3>
+          <ul>
+            <li><a href="#producto">Qué es Neibit</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#tecnologia">Tecnología</a></li>
+            <li><a href="#capturas">Capturas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacidad.html">Política de privacidad</a></li>
+            <li><a href="terminos.html">Términos del servicio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Neibit Inc. Todos los derechos reservados.</span>
+        <span>Neibit es un producto de Neibit Inc.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
