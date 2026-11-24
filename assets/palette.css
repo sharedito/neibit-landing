@@ -14,19 +14,19 @@
 */
 :root {
   /* primario */
-  --color-primary-main: #0F766E;
-  --color-primary-light: #14B8A6;
-  --color-primary-dark: #115E59;
-  --color-primary-deep: #134E4A;
+  --color-primary-main: #C2185B;
+  --color-primary-light: #E91E63;
+  --color-primary-dark: #9D174D;
+  --color-primary-deep: #831843;
   --color-primary-contrast: #FFFFFF;
 
   /* secundario */
-  --color-secondary-main: #F97316;
-  --color-secondary-light: #FB923C;
-  --color-secondary-dark: #EA580C;
+  --color-secondary-main: #F59E0B;
+  --color-secondary-light: #FACC15;
+  --color-secondary-dark: #D97706;
 
   /* fondos */
-  --color-bg-default: #FAF9F6;
+  --color-bg-default: #FFFDF9;
   --color-bg-paper: #FFFFFF;
 
   /* texto */
@@ -35,7 +35,7 @@
   --color-text-muted: #78716C;
 
   /* estados */
-  --color-success-main: #16A34A;
+  --color-success-main: #15803D;
   --color-success-light: #22C55E;
   --color-success-tint: #F0FDF4;
   --color-success-border: #DCFCE7;
@@ -51,8 +51,8 @@
   --color-warning-text: #854D0E;
   --color-warning-dark: #713F12;
 
-  --color-info-tint: #F0FDFA;
-  --color-info-tint-soft: #CCFBF1;
+  --color-info-tint: #FDF2F8;
+  --color-info-tint-soft: #FCE7F3;
 
   /* acentos */
   --color-accent-purple: #7C3AED;
@@ -61,7 +61,7 @@
 
   /* neutrales */
   --color-neutral-white: #FFFFFF;
-  --color-neutral-stone-50: #FAF9F6;
+  --color-neutral-warm: #FFFDF9;
   --color-neutral-stone-100: #F5F5F4;
   --color-neutral-stone-200: #E7E5E4;
   --color-neutral-stone-300: #D6D3D1;
